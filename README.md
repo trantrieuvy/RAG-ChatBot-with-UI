@@ -1,5 +1,6 @@
 # Lecture Slide RAG Assistant
 ![ChatBot UI](/UI.jpg "ChatBot Interactive UI")
+
 This project is a RAG ChatBot built with:
 - Ollama for running local LLMs and embeddings  
 - LangChain for data handling and retrieval  
@@ -64,3 +65,4 @@ streamlit run chat_ui.py
    * Calls your local LLM (`tet_bot`)
    * Shows the answer and expandable **sources**
 4. Expand a source to open the actual PDF page in-browser.
+
