@@ -1,11 +1,10 @@
 # Lecture Slide RAG Assistant
-
+![ChatBot UI](/UI.jpg "ChatBot Interactive UI")
 This project is a RAG ChatBot built with:
 - Ollama for running local LLMs and embeddings  
 - LangChain for data handling and retrieval  
 - ChromaDB for vector storage  
 - Streamlit for a simple chat interface  
-
 The goal: Ask natural-language questions about your lecture slides (PDFs) and get grounded answers with direct links back to the original slide pages.
 
 # Project Structure
@@ -16,7 +15,6 @@ The goal: Ask natural-language questions about your lecture slides (PDFs) and ge
 ├── llama3.2\_tet.modelfile   # Custom Ollama model definition (tet\_bot)
 ├── data/                    # Put your lecture PDFs here
 ├── chroma/                  # ChromaDB will be stored here (auto-created)
-
 ````
 
 # Setup Instructions
@@ -31,7 +29,6 @@ Download Ollama and pull the required models:
 ```bash
 # Embedding model
 ollama pull nomic-embed-text
-
 # Base LLM 
 ollama pull llama3.2
 ```
@@ -47,7 +44,6 @@ Put all lecture slide PDFs in the `data/` folder.
 
 ## 5. Populate the database
 Run this to build (or rebuild) the vector DB:
-
 ```bash
 python populate_database.py --data-path data/ --chroma-path chroma/ --reset
 ```
